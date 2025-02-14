@@ -1,0 +1,224 @@
+print("Lab 1- 14/02/25")
+
+# While loop
+i = 5
+while i <= 10:
+    print(i)
+    i = i + 1
+
+print('')
+
+# For loop
+for i in 'hello':
+    print(i)
+
+print('')
+
+# String formatting (example)
+print("() is even".format(8))
+
+# For loop
+for x in "banana":
+    print(x)
+
+# Finding the length of a string
+x = 'LAB1'
+print(len(x))
+
+print('')
+
+# If-else conditions
+if 5 > 2:
+    print("Five is greater than two!")
+
+if 5 > 8:
+    print("Five is greater than two!")
+
+# Checking the types of variables
+x = 5
+y = "apple"
+print(type(x))
+print(type(y))
+
+# Assigning the same value to multiple variables
+x = y = z = "Izza"
+print(x)
+print(y)
+print(z)
+
+# Printing multiple variables together
+x = 5
+y = "Izza"
+print(x, y)
+
+# String slicing
+b = "This is AI Lab"
+print(b[2:9])
+print(b[2:])
+print(b[:5])
+
+# String methods: upper() and replace()
+a = "Apple"
+print(a.upper())
+print(a.replace("A", "e"))
+
+# using the + operator
+subj = 'CS'
+txt = "I am studying " + subj
+print(txt)
+
+# String formatting with f-strings
+price = 100
+txt = f"The price of the cake is {price} "
+print(txt)
+
+# Boolean operations
+print(3 > 9)
+print(10 == 9)
+print(8 < 9)
+print(bool("Hello"))
+print(bool(0))
+print(bool(15))
+print(bool(""))
+print(bool())
+
+# operations
+print(10 + 5 * 2)
+
+# tuples
+tuple1 = (1, 2, 3)
+print(type(tuple1))
+print(tuple1)
+
+# Iterating over a tuple
+for i in (1, 2, 3):
+    print(i)
+
+print(tuple1[0])
+print(tuple1[1])
+print(tuple1[2])
+
+# Checking if an element is in the tuple
+if 1 in tuple1:
+    print("Yes")
+
+# Tuple with duplicates
+duptuple2 = (1, 1, 2, 2, 3, 3)
+print(type(duptuple2))
+print(duptuple2)
+
+# Swapping values in a tuple (using a new tuple)
+duptuple2 = (duptuple2[1], duptuple2[0], duptuple2[2], duptuple2[3], duptuple2[4], duptuple2[5])
+print(duptuple2)
+
+# lists
+mylist = ["dog", "cat", "puppy"]
+print(mylist)
+print(mylist[1])
+
+# Appending and removing elements in the list
+mylist.append("meow")
+print(mylist)
+
+mylist.remove("meow")
+print(mylist)
+
+# Iterating over a list
+mylist = [1, 2, 3]
+for x in mylist:
+    print(x)
+
+# sets
+set1 = {"dog", "cat", "puppy"}
+print(set1)
+
+# Iterating over a set
+for x in set1:
+    print(x)
+
+# Adding items from one set to another
+set2 = {"bark", "meow"}
+set1.update(set2)
+print(set1)
+
+# Dictionaries
+dict1 = {
+  "class": "CS",
+  "section": "B",
+  "year": 2023
+}
+
+# Updating dictionary values
+print(dict1)
+
+dict1["year"] = 2018
+print(dict1)
+
+dict1.update({"new": "addition"})
+print(dict1)
+
+dict1.pop("new")
+print(dict1)
+
+#dictionary keys and values
+for x in dict1:
+  print(x)
+
+for x in dict1.keys():
+  print(x)
+ 
+ 
+class Students:
+    def __init__(self, name, age, section):
+        self.name = name  
+        self.age = age  
+        self.section = section  
+
+s1 = Students("Izza", 20,"B" )
+print(s1.name)
+
+
+class Stack:
+    def __init__(self):
+        # empty list
+        self.stack = []
+
+    # Push
+    def push(self, item):
+        self.stack.append(item)  
+        print(f"Pushed {item} to the stack.")
+
+    # Pop
+    def pop(self):
+        if not self.is_empty():
+            item = self.stack.pop()  
+            print(f"Popped {item} from the stack.")
+            return item
+        else:
+            print("Stack is empty, cannot pop.")
+            return None
+
+
+    # Check if the stack is empty
+    def is_empty(self):
+        return len(self.stack) == 0
+
+    # Return the size of the stack
+    def size(self):
+        return len(self.stack)
+
+
+stack = Stack()  #  new stack
+
+stack.push(10)    
+stack.push(20)    
+stack.push(30)    
+
+
+stack.pop()
+stack.pop()    
+
+print("Stack size: {stack.size()}")
+
+stack.pop()    
+stack.pop()   
